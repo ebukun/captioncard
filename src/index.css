@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Cera Pro";
+  src: local("Cera Pro"), url(./fonts/Cera_Pro_Light.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cera";
+  src: local("Cera"), url(./fonts/Cera_Pro_Black.otf) format("truetype");
+}
+@font-face {
+  font-family: "Cera";
+  src: local("Cera Medium"), url(./fonts/Cera_Pro_Medium.otf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cera Pro";
+  /* background: #2200bd; */
+}
