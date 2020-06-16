@@ -15,7 +15,7 @@ class TagData extends Component {
 
   getCaption = (id) => {
     window.scroll({
-      top: 800,
+      top: 500,
       behavior: "smooth",
     });
     this.props.dispatch(getMultipleTag(id));
