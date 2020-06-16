@@ -6,7 +6,6 @@ import Captions from "../components/app/caption/Captions";
 export default function Dashboard() {
   return (
     <React.Fragment>
-      <SearchInput />
       <TagData />
       <Captions />
     </React.Fragment>

@@ -13,9 +13,11 @@ class TagData extends Component {
     this.props.dispatch(tag());
   }
 
-  getCaption = id => {
-    console.log(id);
-
+  getCaption = (id) => {
+    window.scroll({
+      top: 800,
+      behavior: "smooth",
+    });
     this.props.dispatch(getMultipleTag(id));
   };
 
@@ -36,7 +38,7 @@ class TagData extends Component {
         <h4 style={{ textAlign: "center", fontFamily: "Cera Medium" }}>Select tags to get captions</h4>
         <ListButton>
           {data === null
-            ? tag.map(tag => {
+            ? tag.map((tag) => {
                 return <Tag key={Math.random()} tagline={tag} getCap={this.getCaption} />;
               })
             : data}
@@ -49,12 +51,12 @@ class TagData extends Component {
 TagData.propTypes = {
   tag: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired,
-  getMultipleTag: PropTypes.func.isRequired
+  getMultipleTag: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ tag }) => ({
   tag: tag.tags,
-  loading: tag.loading
+  loading: tag.loading,
 });
 
 export default connect(mapStateToProps)(TagData);
